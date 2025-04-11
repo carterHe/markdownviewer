@@ -1,0 +1,157 @@
+/* 页面布局 */
+.reader-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 1.2rem; /* text-sm */
+    line-height: 2.5rem;
+  }
+  
+  /* 顶部导航栏 */
+  .reader-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem; /* h-12 */
+    padding-left: 1rem;
+    padding-right: 1rem; /* px-4 */
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  .reader-container blockquote{
+    background: #f3f3f3;
+    margin-left:0px;
+    padding:20px;
+
+  }
+  
+  .header-button {
+    cursor: pointer;
+  }
+  
+  .header-button:hover {
+    opacity: 0.7;
+  }
+  
+  .header-title {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem; /* w-5 h-5 */
+  }
+  
+  /* 正文区域 */
+  .reader-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem; /* p-4 */
+    background-color: white;
+  }
+  
+  /* 底部按钮区 */
+  .reader-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem; /* h-16 */
+    border-top: 1px solid #e5e7eb;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;
+    gap: 1rem; /* space-x-4 */
+  }
+  
+  .nav-button {
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    border-radius: 0.25rem; /* rounded */
+  }
+  
+  .nav-button-active {
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: white;
+  }
+  
+  .nav-button-active:hover {
+    background-color: #2563eb; /* bg-blue-600 */
+  }
+  
+  .nav-button-disabled {
+    background-color: #d1d5db; /* bg-gray-300 */
+    cursor: not-allowed;
+  }
+  
+  .bottom-spacer {
+    height: 20px;
+    background-color: white;
+  }
+  
+  /* 目录抽屉 */
+  .drawer-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+  }
+  
+  .drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .drawer-panel {
+    margin-left: auto;
+    width: 80%;
+    max-width: 20rem; /* max-w-xs */
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    padding: 1rem; /* p-4 */
+    overflow-y: auto;
+  }
+  
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  .drawer-title {
+    font-size: 1rem; /* text-base */
+    font-weight: 600; /* font-semibold */
+  }
+  
+  /* 目录树样式 */
+  .tree-item {
+    margin-left: 0.5rem; /* ml-2 */
+  }
+  
+  .tree-node {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem; /* py-1 px-2 */
+    cursor: pointer;
+    border-left: 2px solid transparent;
+  }
+  
+  .tree-node:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+  }
+  
+  .tree-node-expanded {
+    border-left: 2px solid #3b82f6; /* border-blue-500 */
+  }
+  
+  .tree-icon {
+    width: 1rem;
+    height: 1rem; /* w-4 h-4 */
+    margin-right: 0.25rem; /* mr-1 */
+  }
+  
+  .tree-children {
+    margin-left: 1rem; /* ml-4 */
+  }

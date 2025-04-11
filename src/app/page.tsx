@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { FaFolder, FaFolderOpen } from 'react-icons/fa';
 import { marked } from 'marked';
+import Link from 'next/link';
 
 interface FileItem {
   type: 'directory' | 'file';
@@ -75,6 +76,11 @@ export default function Home() {
     <div className={`app ${darkMode ? 'dark' : 'light'}`}>
       <div style={{ display: 'flex' }}>
         <div style={{ width: '300px', borderRight: '1px solid #ccc', padding: '10px' }}>
+<Link href="/phone">
+  <button style={{ position: 'fixed', bottom: '50px', right: '10px' }}>
+    手机版
+  </button>
+</Link>
           <h2>书籍目录</h2>
           <div>{renderDirectory(bookStructure)}</div>
         </div>

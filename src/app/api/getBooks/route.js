@@ -15,6 +15,7 @@ export async function GET(req) {
         return {
           type: 'directory',
           name: file,
+          path: path.relative(booksDir,fullPath),
           children: getDirectoryStructure(fullPath),  // 递归获取子目录
         };
       } else {

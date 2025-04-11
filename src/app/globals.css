@@ -1,6 +1,6 @@
 /* 基本样式 */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: '宋体', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -79,8 +79,9 @@ button:hover {
 }
 
 .markdown-content p {
-  line-height: 1.8;
+  line-height: 2;
   margin-bottom: 15px;
+
 }
 
 .markdown-content a {
